@@ -48,7 +48,7 @@ app.get('/ZBUMCommunicate/deleteGame/:gameID', function (req, res) {
     return;
   }
   takenGameIDs.splice(indexWeWant, 1);
-  takenGameIDs.splice(gameInfosJSON, 1);
+  gameInfosJSON.splice(indexWeWant, 1);
 
   res.send("done"); //replace with your data here
 });
