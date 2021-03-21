@@ -42,7 +42,7 @@ app.get('/ZBUMCommunicate/gimmeAllTakenIDs', function (req, res) {
 
 app.get('/ZBUMCommunicate/deleteGame/:gameID', function (req, res) {
   // res.send("dd");
-  let indexWeWant = takenGameIDs.indexOf(req.params.gameID);
+  let indexWeWant = takenGameIDs.indexOf(req.params.gameID.toUpperCase());
   if (indexWeWant == -1) {
     res.send("not found");
     return;
@@ -55,7 +55,7 @@ app.get('/ZBUMCommunicate/deleteGame/:gameID', function (req, res) {
 
 app.get('/ZBUMCommunicate/gimmeJSON/:gameID', function (req, res) {
   // res.send("dd");
-  let indexWeWant = takenGameIDs.indexOf(req.params.gameID);
+  let indexWeWant = takenGameIDs.indexOf(req.params.gameID.toUpperCase());
   if (indexWeWant == -1) {
     res.send("not found");
     return;
@@ -68,7 +68,7 @@ app.get('/ZBUMCommunicate/gimmeJSON/:gameID', function (req, res) {
 
 app.get('/ZBUMCommunicate/updateGameStates/:gameID/:major/:minor', function (req, res) {
   // res.send("dd");
-  let indexWeWant = takenGameIDs.indexOf(req.params.gameID);
+  let indexWeWant = takenGameIDs.indexOf(req.params.gameID.toUpperCase());
   if (indexWeWant == -1) {
     res.send("not found");
     return;
@@ -85,7 +85,7 @@ app.get('/ZBUMCommunicate/updateGameStates/:gameID/:major/:minor', function (req
 
 app.get('/ZBUMCommunicate/updateGameData/:gameID/:dataInMyFormat', function (req, res) {
   // res.send("dd");
-  let indexWeWant = takenGameIDs.indexOf(req.params.gameID);
+  let indexWeWant = takenGameIDs.indexOf(req.params.gameID.toUpperCase());
   if (indexWeWant == -1) {
     res.send("not found");
     return;
@@ -104,7 +104,7 @@ app.get('/ZBUMCommunicate/updateGameData/:gameID/:dataInMyFormat', function (req
 
 app.get('/ZBUMCommunicate/changeJSURL/:gameID/:tokenID', function (req, res) {
   // res.send("dd");
-  let indexWeWant = takenGameIDs.indexOf(req.params.gameID);
+  let indexWeWant = takenGameIDs.indexOf(req.params.gameID.toUpperCase());
   if (indexWeWant == -1) {
     res.send("not found");
     return;
@@ -119,7 +119,7 @@ app.get('/ZBUMCommunicate/changeJSURL/:gameID/:tokenID', function (req, res) {
 
 app.get('/ZBUMCommunicate/updateMasterData/:gameID/:dataInMyFormat', function (req, res) {
   // res.send("dd");
-  let indexWeWant = takenGameIDs.indexOf(req.params.gameID);
+  let indexWeWant = takenGameIDs.indexOf(req.params.gameID.toUpperCase());
   if (indexWeWant == -1) {
     res.send("not found");
     return;
@@ -138,7 +138,7 @@ app.get('/ZBUMCommunicate/updateMasterData/:gameID/:dataInMyFormat', function (r
 
 app.get('/ZBUMCommunicate/incrementCurrentNumberOfPlayers/:gameID/:num', function (req, res) {
   // res.send("dd");
-  let indexWeWant = takenGameIDs.indexOf(req.params.gameID);
+  let indexWeWant = takenGameIDs.indexOf(req.params.gameID.toUpperCase());
   if (indexWeWant == -1) {
     res.send("not found");
     return;
@@ -152,7 +152,7 @@ app.get('/ZBUMCommunicate/incrementCurrentNumberOfPlayers/:gameID/:num', functio
 
 app.get('/ZBUMCommunicate/changePlayerName/:gameID/:whichPlayer/:whatName/:setActive/:increment', function (req, res) {
   // res.send("dd");
-  let indexWeWant = takenGameIDs.indexOf(req.params.gameID);
+  let indexWeWant = takenGameIDs.indexOf(req.params.gameID.toUpperCase());
   if (indexWeWant == -1) {
     res.send("not found");
     return;
@@ -185,7 +185,7 @@ app.get('/ZBUMCommunicate/changePlayerName/:gameID/:whichPlayer/:whatName/:setAc
 
 app.get('/ZBUMCommunicate/setActionsToPlayers/:gameID/:whichPlayer/:whichAction', function (req, res) {
   // res.send("dd");
-  let indexWeWant = takenGameIDs.indexOf(req.params.gameID);
+  let indexWeWant = takenGameIDs.indexOf(req.params.gameID.toUpperCase());
   if (indexWeWant == -1) {
     res.send("not found");
     return;
@@ -206,7 +206,7 @@ app.get('/ZBUMCommunicate/setActionsToPlayers/:gameID/:whichPlayer/:whichAction'
 
 app.get('/ZBUMCommunicate/setPlayerStates/:gameID/:whichPlayer/:whichState', function (req, res) {
   // res.send("dd");
-  let indexWeWant = takenGameIDs.indexOf(req.params.gameID);
+  let indexWeWant = takenGameIDs.indexOf(req.params.gameID.toUpperCase());
   if (indexWeWant == -1) {
     res.send("not found");
     return;
@@ -228,7 +228,7 @@ app.get('/ZBUMCommunicate/setPlayerStates/:gameID/:whichPlayer/:whichState', fun
 
 app.get('/ZBUMCommunicate/updatePlayerInfo/:gameID/:whichPlayer/:dataInMyFormat', function (req, res) {
   // res.send("dd");
-  let indexWeWant = takenGameIDs.indexOf(req.params.gameID);
+  let indexWeWant = takenGameIDs.indexOf(req.params.gameID.toUpperCase());
   if (indexWeWant == -1) {
     res.send("not found");
     return;
@@ -260,7 +260,7 @@ app.get('/ZBUMCommunicate/updatePlayerInfo/:gameID/:whichPlayer/:dataInMyFormat'
 
 app.get('/ZBUMCommunicate/updatePlayerInput/:gameID/:whichPlayer/:dataInMyFormat', function (req, res) {
   // res.send("dd");
-  let indexWeWant = takenGameIDs.indexOf(req.params.gameID);
+  let indexWeWant = takenGameIDs.indexOf(req.params.gameID.toUpperCase());
   if (indexWeWant == -1) {
     res.send("not found");
     return;
@@ -293,14 +293,14 @@ app.get('/ZBUMCommunicate/updatePlayerInput/:gameID/:whichPlayer/:dataInMyFormat
 app.get('/ZBUMCommunicate/makeGame/:gameID/:lang/:maxPlayers/:javascriptFileURL/:gameDataNum/:masterDataNum/:playerInfoNum/:playerInputNum', function (req, res) {
   // res.send("dd");
   //console.log("gg0");
-  if (takenGameIDs.indexOf(req.params.gameID) != -1) {
+  if (takenGameIDs.indexOf(req.params.gameID.toUpperCase()) != -1) {
     res.send("taken");
     return;
   }
   // console.log("gg1");
-  takenGameIDs.push(req.params.gameID);
+  takenGameIDs.push(req.params.gameID.toUpperCase());
   let tmp = " ";
-  tmp += '{"gameID":"' + req.params.gameID + '",' + '"language":' + req.params.lang + ',"currentNumberOfPlayers": 0,"maxNumberOfPlayers":' + req.params.maxPlayers + ',"majorGameState":-1,"minorGameState":0,"javascriptFileURL":"' + req.params.javascriptFileURL + '",';
+  tmp += '{"gameID":"' + req.params.gameID.toUpperCase() + '",' + '"language":"' + req.params.lang + '","currentNumberOfPlayers": 0,"maxNumberOfPlayers":' + req.params.maxPlayers + ',"majorGameState":-1,"minorGameState":0,"javascriptFileURL":"' + req.params.javascriptFileURL + '",';
   tmp += '"gameData":[" "';
   //console.log("gg2");
   for (let index = 1; index < req.params.gameDataNum; index++) {
