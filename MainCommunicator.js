@@ -17,7 +17,8 @@ console.log("hiii");
 
 
 
-app.use(cors())
+app.use(cors());
+app.options('*', cors());
 
 app.get('/', function (req, res) {
   doShit();
